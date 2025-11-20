@@ -1,0 +1,6 @@
+# netlify.toml
+# Aggiunge header CSP per permettere temporaneamente 'unsafe-eval'
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; connect-src 'self' https:; img-src 'self' data: https:; frame-ancestors 'none';"
